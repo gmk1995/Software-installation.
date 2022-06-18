@@ -1,0 +1,148 @@
+Name: Gopavaram Mohan Kumar
+Batch: April 15th, 2022
+Tutor: Raham Shaik
+Project Name: Software installation.
+Java Installation on Ubuntu Machine:
+1.	Created an Ec2 Instance with Ubuntu image.
+2.	Updated the instance by using the (apt-get update -y) command
+3.	Installed JRE Package by using the (apt-get install default-jre -y) command.
+4.	Installed JDK Package by using the (apt-get install default-jdk -y) command.
+5.	Checked Java Version.
+6.	Listed the JVM by using the (ls /usr/lib/jvm/)
+7.	Installed the vim package by using the (apt install vim -y)
+8.	Wrote the script on the /etc/profile.d/jdk11.sh
+9.	 
+10.	I have run the script to print the Java_Home and Path
+
+
+ 
+
+Basic Program Run:
+
+ 
+Java Program Compile:
+
+ 
+
+Java Program Execute:
+
+ 
+
+PYTHON INSTALLATION ON UBUNTU:
+1.	Updated the Packages on the Ubuntu Machine by running the (apt-get update -y) command.
+ 
+2.	Installed Python by running the (apt-get install python3 -y) command.
+                                    
+3.	Installed Python version 3.8 by running the (apt-get install python3.8 -y) command.
+ 
+4.	 Python3 will take to space where we can write our code.
+ 
+5.	Running a Basic Python Program.
+ 
+6.	Exit from Python 3 space by using the exit command.
+ 
+
+NODEJS INSTALLATION ON UBUNTU:
+
+1.	Installed nodejs by running the ( apt install nodejs -y ) command.
+2.	Checked version after the installation of nodejs by running the (node -v) command.
+ 
+3.	Nodejs is successfully installed and entered into nodejs to run the program by using the (nodejs) command.
+ 
+4.	Exited from nodejs by using the ( .exit() ) command.
+ 
+ARANGO INSTALLATION ON UBUNTU:
+1.	First add the repository key to apt like this:
+2.	wget -q https://download.arangodb.com/arangodb39/DEBIAN/Release.key
+3.	sudo apt-key add - < Release.key
+4.	Use apt-get to install arangodb:
+5.	By running the ( echo 'deb https://download.arangodb.com/arangodb39/DEBIAN/ /' | sudo tee /etc/apt/sources.list.d/arangodb.list ) command 
+ 
+6.	Update the package by running the ( apt update -y ) command.
+7.	Run the ( sudo apt-get install apt-transport-https)
+8.	By running the ( apt-y install arangodb3 ) command.
+9.	Below pop-up will show after running the ( apt -y install arangodb3 ) command. Here I have set up the password for the root user.
+ 
+
+
+10.	It will pop the screen to repeat the password for the root user.
+ 
+11.	Automatically Upgrade Database files
+
+
+
+ 
+
+12.	I have restarted the arangodb by running the (systemctl start arangodb3) command.
+13.	Checked the status of the arangodb. It is actively running.
+14.	 Ran arangosh, below is the pop-up to enter to arango shell
+ 
+15.	Created the New Database by running ( db._createDatabase(“mohandb”);
+
+ 
+16.	Checked how many databases are there in arangodb by running the ( db._databases() ) command.
+
+ 
+17.	Ran ( vim /etc/arangodb3/arangod.conf ) command, on arangodb configuration file added  
+Private address.
+ 
+
+18.	Restarted the arangodb3 by running the ( systemctl restart arangodb3) command.
+19.	Checked the arangodb3 status by running the ( systemctl status arangodb3) command.
+20.	Take the public IP address and used port 8529 to launch the arango db and used the root as a username and password which was provided earlier while installing the arango db.
+
+ 
+21.	After successfully logging into the arangodb it has asked me which database I have to choose.
+
+ 
+22.	After choosing the System Database on the dashboard below status showing. 
+
+ 
+
+PERCONA MYSQL INSTALLATION ON UBUNTU:
+1.	Install GnuPG, the GNU Privacy Guard ( apt install gnupg2) command.
+2.	Fetch the repository packages from Percona web (wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb ) command.
+
+ 
+3.	Install the downloaded package with dpkg. To do that, I have run the following commands as root ( dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb ) 
+
+
+ 
+4.	Ran percona-release setup ps80 for enabling the percona server 8.0 Repositories
+
+ 
+5.	Installed Percona by running ( apt install percona-server-server ) command and the pop-up is shown below to set up the password for the root user.
+ 
+6.	Re-enter the password for the root user
+ 
+7.	Configuring Percona Server
+ 
+8.	Setup default authentication plugin as use strong password encryption 
+
+ 
+
+9.	Ran mysql -u root –p command to enter into the database shell, it will ask the password which was configured while installing the percona server, we have to enter the password to go percona server.
+ 
+10.	Created Database and checked how many databases are there. Delete the database and exited. 
+ 
+
+MONGO DB INSTALLATION ON UBUNTU:
+1.	Mongodb is part of the ubuntu repositories we no longer need to get the resources from the internet. 
+2.	Installed mongodb by running (apt install -y mongodb) command.
+3.	By running the ( apt  update -y ) it will update the mongodb repositories.
+4.	We start mongodb services by running the ( service mongodb start ) command.
+5.	Checked mongodb status by running the ( service mongodb status ) command.
+ 
+6.	Upon running the mongo command it will open the mongo shell 
+
+ 
+7.	Show dbs; it will show the databases present in the mongodb
+ 
+8.	Created new database by using ( use mohandb; ) command.
+ 
+9.	To check on which database we are in we can use ( db; ) command.
+ 
+10.	To Exit from the mongodb shell we can use ( exit ) command.
+ 
+
+
